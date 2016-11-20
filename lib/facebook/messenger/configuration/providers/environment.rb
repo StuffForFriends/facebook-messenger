@@ -6,8 +6,8 @@ module Facebook
         class Environment
           def valid_verify_token?(verify_token)
             puts 'VERIFY TOKEN:'
-            puts '     got: ' + verify_token
-            puts 'expected: ' + ENV['VERIFY_TOKEN']
+            puts '     got: ' + verify_token.inspect
+            puts 'expected: ' + ENV['VERIFY_TOKEN'].inspect
             puts 'DONE VERIFY'
             verify_token == ENV['VERIFY_TOKEN']
           end
